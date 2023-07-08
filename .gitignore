@@ -1,0 +1,27 @@
+# Игнорировать каталог node_modules 
+node_modules/ 
+
+# Игнорирование файлов специфичных для IDE 
+.idea/ 
+.vscode/ 
+*.sw*
+
+# Игнорирование каталога со сборкой проекта
+/dist 
+/build
+
+# Игнорирование логов 
+logs 
+*.log 
+
+# Игнорирование файла содержащий переменные окружения  
+.env 
+
+# ...........................
+package-lock.json
+
+# .eslintrc.js
+# .eslintignore
+# .gitignore
+# package.json
+# webpack.config.js
