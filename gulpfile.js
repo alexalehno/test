@@ -18,9 +18,9 @@ function scripts() {
 };
 
 function styles() {
-	return src('src/scss/styles.scss')
+	return src('src/scss/index.scss')
 		.pipe(autoprefixer())
-		.pipe(concat('style.min.css'))
+		.pipe(concat('index.min.css'))
 		.pipe(scss({ outputStyle: 'compressed' }))
 		.pipe(dest('src/css'))
 		.pipe(browserSync.stream());
@@ -32,7 +32,7 @@ function watching() {
 			baseDir: 'src/'
 		}
 	});
-	watch(['src/scss/styles.scss'], styles)
+	watch(['src/scss/index.scss'], styles)
 	watch(['src/js/main.js'], scripts)
 	watch(['src/*.html']).on('change', browserSync.reload);
 }
@@ -44,7 +44,7 @@ function cleanDist() {
 
 function building() {
 	return src([
-		'src/css/style.min.css',
+		'src/css/index.min.css',
 		'src/images/*.*',
 		'src/js/main.min.js',
 		'src/index.html'

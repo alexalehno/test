@@ -1,0 +1,200 @@
+.form {
+	display: flex;
+
+	max-width: 665px;
+	width: 100%;
+	min-height: 480px;
+}
+
+.logo-block {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+
+	max-width: 137px;
+	width: 100%;
+
+	background-color: #5A61ED;
+
+	&__img {
+		margin: 24px 7px;
+	}
+}
+
+//...................................................
+.content {
+	display: grid;
+	grid-template-rows: auto 1fr;
+
+	max-width: 527px;
+	width: 100%;
+	padding: 40px 20px 30px;
+
+	background-color: #FFF;
+	background-image: url('../images/shape.svg');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.form-header {
+	margin-bottom: 20px;
+
+	font-family: 'Work Sans', sans-serif;
+	color: #111;
+
+	&__title {
+		margin: 0;
+
+		font-size: 22px;
+		font-weight: 500;
+		letter-spacing: -0.46px;
+	}
+
+	&__subtitle {
+		margin: 0;
+
+		font-size: 14px;
+		font-weight: 300;
+	}
+}
+
+.fields-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	height: fit-content;
+	padding: 0;
+	margin: 0 0 20px;
+
+	list-style: none;
+}
+
+.fields-item {
+	max-width: 235px;
+	width: 100%;
+	height: 42px;
+	margin-bottom: 15px;
+
+	font-family: 'Work Sans', sans-serif;
+
+	&__label {
+		display: block;
+		width: 100%;
+
+		color: #7C7C7C;
+		font-size: 12px;
+		font-weight: 300;
+	}
+
+	&__input {
+		display: block;
+
+		width: 100%;
+		padding: 5px 0;
+
+		border: none;
+		border-bottom: 1px solid #F2F2F2;
+		outline: none;
+
+		color: #111;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0.7px;
+
+		&_error {
+			color: #FF2222;
+			border-bottom: 2px solid #FF2828;
+		}
+	}
+}
+
+.date-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.date-select {
+	border: none;
+	outline: none;
+
+	&_day {
+		width: 56px;
+	}
+
+	&_month {
+		width: 91px;
+	}
+
+	&_year {
+		width: 68px;
+	}
+}
+
+.gender-block {
+	display: flex;
+
+	&__label {
+		display: flex;
+		align-items: center;
+		margin-right: 17px;
+	}
+
+	&__radio {
+		display: none;
+
+		&:checked~.gender-block__checkmark:after {
+			width: 7px;
+			height: 7px;
+		}
+	}
+
+	&__checkmark {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 13px;
+		width: 13px;
+		margin-right: 5px;
+		border: 1px solid #5A61ED;
+		border-radius: 50%;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 0px;
+			height: 0px;
+			border-radius: 50%;
+			background: #5A61ED;
+			transition: 0.2s;
+		}
+	}
+}
+
+//...................................................
+.signup-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__title {
+		font-family: 'Work Sans', sans-serif;
+		font-size: 13px;
+		font-weight: 300;
+	}
+
+	&__link {
+		font-weight: 500;
+	}
+
+	&__btn {
+		padding: 7px 26px;
+		margin-left: 5px;
+		border: none;
+
+		color: #FFF;
+		font-family: 'PT Sans', sans-serif;
+		font-size: 14px;
+		background-color: #5A61ED;
+	}
+}

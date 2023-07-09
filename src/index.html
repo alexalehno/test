@@ -8,11 +8,106 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400;500&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link href="./images/favicon.svg" rel="shortcut icon">
+	<link rel="stylesheet" href="css/index.min.css">
 	<title>Test</title>
 </head>
 
 <body>
+	<section class="section">
+		<form class="form" action="#">
+			<div class="logo-block">
+				<img class="logo-block__img" src="./images/logo.svg" alt="logo text">
+			</div>
+
+			<div class="content">
+				<div class="form-header">
+					<h3 class="form-header__title">New user?</h3>
+					<p class="form-header__subtitle">Use the form below to create your account.</p>
+				</div>
+
+				<ul class="fields-list">
+					<li class="fields-item">
+						<label class="fields-item__label" for="firs_name">First Name</label>
+						<input class="fields-item__input" type="text" id="firs_name">
+					</li>
+
+					<li class="fields-item">
+						<label class="fields-item__label" for="last_name">Last Name</label>
+						<input class="fields-item__input" type="text" id="last_name">
+					</li>
+
+					<li class="fields-item">
+						<label class="fields-item__label" for="nationality">Nationality</label>
+						<select class="fields-item__input" id="nationality">
+							<option value="">American</option>
+						</select>
+					</li>
+
+					<li class="fields-item">
+						<label class="fields-item__label" for="email">E-mail</label>
+						<input class="fields-item__input" type="email" id="email">
+					</li>
+
+					<li class="fields-item">
+						<label class="fields-item__label">Date of Birth</label>
+						<div class="fields-item__input date-block">
+							<select class="date-select date-select_day">
+								<option value="">21</option>
+							</select>
+
+							<select class="date-select date-select_month">
+								<option value="">December</option>
+							</select>
+
+							<select class="date-select date-select_year">
+								<option value="">1995</option>
+							</select>
+						</div>
+					</li>
+
+					<li class="fields-item">
+						<label class="fields-item__label" for="email">Gender</label>
+
+						<div class="fields-item__input gender-block">
+							<label class="gender-block__label">
+								<input class="gender-block__radio" type="radio" id="male" name="gender" value="male">
+								<span class="gender-block__checkmark"></span>
+								Male
+							</label>
+
+							<label class="gender-block__label">
+								<input class="gender-block__radio" type="radio" id="female" name="gender" value="female" checked>
+								<span class="gender-block__checkmark"></span>
+								Female
+							</label>
+						</div>
+					</li>
+
+					<li class="fields-item">
+						<label class="fields-item__label" for="password">Password</label>
+						<input class="fields-item__input" type="password" id="password">
+					</li>
+
+					<li class="fields-item">
+						<label class="fields-item__label" for="confirm_password">Confirm Password</label>
+						<input class="fields-item__input" type="password" id="confirm_password">
+					</li>
+				</ul>
+
+				<div class="signup-block">
+					<div class="signup-block__title">
+						Have an account?
+						<a class="signup-block__link" href="" onclick="return false">Login</a>
+					</div>
+
+					<button class="signup-block__btn">Complete Signup</button>
+				</div>
+			</div>
+
+		</form>
+	</section>
+
 	<script src="js/main.min.js"></script>
 </body>
 
