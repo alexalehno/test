@@ -1,8 +1,5 @@
 "use strict"
 
-const delay = (timeout) => {
-	return new Promise((resolve) => setTimeout(resolve, timeout));
-};
 
 // logo animation
 const logo = document.querySelector('#logo');
