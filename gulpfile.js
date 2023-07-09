@@ -7,9 +7,10 @@ const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 
+const scriptsSrc= ['src/js/main.js', 'src/js/animation.js']
 
 function scripts() {
-	return src('src/js/main.js')
+	return src(scriptsSrc)
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.pipe(dest('src/js'))
@@ -32,8 +33,9 @@ function watching() {
 			baseDir: 'src/'
 		}
 	});
-	watch(['src/scss/index.scss'], styles)
-	watch(['src/js/main.js'], scripts)
+	watch(['src/scss/*.*'], styles)
+	watch('src/js/main.js', scripts)
+	watch('src/js/animation.js', scripts)
 	watch(['src/*.html']).on('change', browserSync.reload);
 }
 
@@ -47,6 +49,7 @@ function building() {
 		'src/css/index.min.css',
 		'src/images/*.*',
 		'src/js/main.min.js',
+		'src/js/vendor/*.*',
 		'src/index.html'
 	], { base: 'src' })
 		.pipe(dest('dist'))

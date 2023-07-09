@@ -1,3 +1,5 @@
+@use './vars';
+
 .form {
 	display: flex;
 
@@ -18,6 +20,8 @@
 
 	&__img {
 		margin: 24px 7px;
+
+		transition: vars.$transition;
 	}
 }
 
@@ -77,6 +81,7 @@
 	margin-bottom: 15px;
 
 	font-family: 'Work Sans', sans-serif;
+	transition: vars.$transition;
 
 	&__label {
 		display: block;
@@ -196,5 +201,7 @@
 		font-family: 'PT Sans', sans-serif;
 		font-size: 14px;
 		background-color: #5A61ED;
+		
+		transition: vars.$transition;
 	}
 }
